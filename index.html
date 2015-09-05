@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cat Clicker</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jQuery.js"></script>
+	<script src="js/clicker.js"></script>
+</head>
+<body>
+	<h1>Welcome to Cat Clicker!</h1>
+	<h2>Click the cat.</h2>
+	<img id="catpic" src="imgs/cutecat.jpg" alt="Cute cat">
+	<img id="catpic2" src="imgs/cutecat.jpg" alt="Cute cat">
+	<div>
+		<p id='displayCount'>Count</p>
+		<p id='displayCount2'>Count</p>
+	</div>
+
+<script>
+	
+	var count = 0;
+
+	var elem = document.getElementById('catpic');
+	elem.addEventListener('click', function(){
+		count = count + 1;
+	  	console.log("I clicked!");
+	  	console.log("Count is now: " + count);
+	  	document.getElementById('displayCount').innerHTML = count;
+	}, false);
+
+
+	var count2 = 0;
+
+	var elem = document.getElementById('catpic2');
+	elem.addEventListener('click', function(){
+		count2 = count2+ 1;
+	  	console.log("I clicked!");
+	  	console.log("Count is now: " + count2);
+	  	document.getElementById('displayCount2').innerHTML = count2;
+	}, false);
+
+
+</script>
+
+</body>
+</html>
